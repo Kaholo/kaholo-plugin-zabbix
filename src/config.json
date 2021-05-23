@@ -1,0 +1,248 @@
+{
+  "name": "Zabbix",
+  "type": "executer",
+  "execProgram": "node",
+  "main": "app.js",
+  "version": "1.0.0",
+  "description":"Kaholo integration with Zabbix API",
+  "imgUrl": "logo.png",
+  "settings":[
+    {
+      "name":"host",
+      "viewName": "Host URL",
+      "type":"string"
+    },
+    {
+      "name": "user",
+      "viewName": "Username",
+      "type": "string"
+    },
+    {
+      "name": "pass",
+      "viewName": "Password",
+      "type": "vault"
+    }
+  ],
+  "methods": [
+    {
+      "name": "getEvents",
+      "viewName": "Get Events",
+      "params": [
+        {
+          "name":"host",
+          "viewName": "Host URL",
+          "type":"string"
+        },
+        {
+          "name":"user",
+          "viewName":"Username",
+          "type":"string"
+        },
+        {
+          "name": "pass",
+          "viewName": "Password",
+          "type": "vault"
+        },
+        {
+          "name": "eventsIds",
+          "viewName": "Events IDs",
+          "type": "text"
+        },
+        {
+          "name": "groupsIds",
+          "viewName": "Groups IDs",
+          "type": "text"
+        },
+        {
+          "name": "severities",
+          "viewName": "Severities",
+          "type": "text"
+        },
+        {
+          "name": "tags",
+          "viewName": "Tags",
+          "type": "text"
+        },
+        {
+          "name": "tagEval",
+          "viewName": "Tag Eval Type",
+          "type": "options",
+          "options": [
+            {
+              "id": "AND",
+              "name": "AND"
+            },
+            {
+              "id": "OR",
+              "name": "OR"
+            }
+          ]
+        },
+        {
+          "name": "acknowledged",
+          "viewName": "Acknowledged",
+          "type": "options",
+          "options": [
+            {
+              "id": "Both",
+              "name": "Both"
+            },
+            {
+              "id": "Acknowledged",
+              "name": "Acknowledged"
+            },
+            {
+              "id": "Un-acknowledged",
+              "name": "Un-acknowledged"
+            }
+          ]
+        },
+        {
+          "name": "suppressed",
+          "viewName": "Suppressed",
+          "type": "boolean"
+        }
+      ]
+    },
+    {
+      "name": "acknowledgeEvents",
+      "viewName": "Acknowledge Events",
+      "params": [
+        {
+          "name":"host",
+          "viewName": "Host URL",
+          "type":"string"
+        },
+        {
+          "name":"user",
+          "viewName":"Username",
+          "type":"string"
+        },
+        {
+          "name": "pass",
+          "viewName": "Password",
+          "type": "vault"
+        },
+        {
+          "name": "eventsIds",
+          "viewName": "Events IDs",
+          "type": "text"
+        },
+        {
+          "name": "ackType",
+          "viewName": "Acknowledge Type",
+          "type": "options",
+          "options": [
+            {
+              "id": "Acknowledge",
+              "name": "Acknowledge"
+            },
+            {
+              "id": "Un-acknowledge",
+              "name": "Un-acknowledge"
+            },
+            {
+              "id": "None",
+              "name": "None"
+            }
+          ]
+        },
+        {
+          "name": "close",
+          "viewName": "Close",
+          "type": "boolean"
+        },
+        {
+          "name": "msg",
+          "viewName": "Message",
+          "type": "text"
+        },
+        {
+          "name": "severity",
+          "viewName": "Severity",
+          "type": "string"
+        }
+      ]
+    },
+    {
+      "name": "getProblems",
+      "viewName": "Get Problems",
+      "params": [
+        {
+          "name":"host",
+          "viewName": "Host URL",
+          "type":"string"
+        },
+        {
+          "name":"user",
+          "viewName":"Username",
+          "type":"string"
+        },
+        {
+          "name": "pass",
+          "viewName": "Password",
+          "type": "vault"
+        },
+        {
+          "name": "eventsIds",
+          "viewName": "Events IDs",
+          "type": "text"
+        },
+        {
+          "name": "groupsIds",
+          "viewName": "Groups IDs",
+          "type": "text"
+        },
+        {
+          "name": "severities",
+          "viewName": "Severities",
+          "type": "text"
+        },
+        {
+          "name": "tags",
+          "viewName": "Tags",
+          "type": "text"
+        },
+        {
+          "name": "tagEval",
+          "viewName": "Tag Eval Type",
+          "type": "options",
+          "options": [
+            {
+              "id": "AND",
+              "name": "AND"
+            },
+            {
+              "id": "OR",
+              "name": "OR"
+            }
+          ]
+        },
+        {
+          "name": "acknowledged",
+          "viewName": "Acknowledged",
+          "type": "options",
+          "options": [
+            {
+              "id": "Both",
+              "name": "Both"
+            },
+            {
+              "id": "Acknowledged",
+              "name": "Acknowledged"
+            },
+            {
+              "id": "Un-acknowledged",
+              "name": "Un-acknowledged"
+            }
+          ]
+        },
+        {
+          "name": "suppressed",
+          "viewName": "Suppressed",
+          "type": "boolean"
+        }
+      ]
+    }
+  ]
+}
