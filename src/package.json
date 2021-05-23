@@ -1,0 +1,14 @@
+{
+  "name": "kaholo-plugin-zabbix",
+  "version": "1.0.0",
+  "description": "Kaholo integration with Zabbix API",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Kaholo team (Amit Alon)",
+  "license": "ISC",
+  "dependencies": {
+    "zabbix-client": "^1.2.7"
+  }
+}
