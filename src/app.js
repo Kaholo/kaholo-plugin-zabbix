@@ -43,7 +43,7 @@ async function acknowledgeEvents(action, settings) {
     if (eventsIds.length == 0){
         throw "Events Ids must consist of at least one ID";
     }
-    const ackType = action.params.ackType | "Acknowledge";
+    const ackType = action.params.ackType || "Acknowledge";
     let severity = action.params.severity;
     if (typeof(severity) === "string"){
         severity = parseInt(severity);
