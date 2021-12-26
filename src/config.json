@@ -3,14 +3,14 @@
   "type": "executer",
   "execProgram": "node",
   "main": "app.js",
-  "version": "1.0.1",
-  "description":"Kaholo integration with Zabbix API",
+  "version": "1.0.3",
+  "description": "Kaholo integration with Zabbix API",
   "imgUrl": "logo.png",
-  "settings":[
+  "settings": [
     {
-      "name":"host",
+      "name": "host",
       "viewName": "Host URL",
-      "type":"string"
+      "type": "string"
     },
     {
       "name": "user",
@@ -29,14 +29,14 @@
       "viewName": "Get Events",
       "params": [
         {
-          "name":"host",
+          "name": "host",
           "viewName": "Host URL",
-          "type":"string"
+          "type": "string"
         },
         {
-          "name":"user",
-          "viewName":"Username",
-          "type":"string"
+          "name": "user",
+          "viewName": "Username",
+          "type": "string"
         },
         {
           "name": "pass",
@@ -109,14 +109,14 @@
       "viewName": "Acknowledge Events",
       "params": [
         {
-          "name":"host",
+          "name": "host",
           "viewName": "Host URL",
-          "type":"string"
+          "type": "string"
         },
         {
-          "name":"user",
-          "viewName":"Username",
-          "type":"string"
+          "name": "user",
+          "viewName": "Username",
+          "type": "string"
         },
         {
           "name": "pass",
@@ -169,14 +169,14 @@
       "viewName": "Get Problems",
       "params": [
         {
-          "name":"host",
+          "name": "host",
           "viewName": "Host URL",
-          "type":"string"
+          "type": "string"
         },
         {
-          "name":"user",
-          "viewName":"Username",
-          "type":"string"
+          "name": "user",
+          "viewName": "Username",
+          "type": "string"
         },
         {
           "name": "pass",
@@ -244,5 +244,6 @@
         }
       ]
     }
-  ]
+  ],
+  "category": "MONITORING"
 }
